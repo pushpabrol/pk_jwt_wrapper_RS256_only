@@ -1,6 +1,7 @@
 # Token Endpoint Wrapper for Private Key JWT Client Authentication
 
-This repository contains a Node.js-based Token Endpoint Wrapper for Private Key JWT assertion to be used as part of an auth0 OIDC connection for an IDP that requires client authentication on token endpoint via private_key_jwt
+This repository contains a Node.js-based Token Endpoint Wrapper for Private Key JWT assertion to be used as part of an auth0 OIDC connection for an IDP that requires client authentication on token endpoint via private_key_jwt. This sample assumes the IDP is returning tokens signed with `RS256` and the client assertion for client authentication is also created using RS256
+
 
 ## Prerequisites
 
@@ -41,7 +42,7 @@ POST /token
 
 ### 2. `/.well-known/keys` (GET)
 
-This endpoint provides the public keys for client authentication. It's used by the IDP to verify client assertions. In this example it has keys for both RS256 and RS512.
+This endpoint provides the public keys for client authentication. It's used by the IDP to verify client assertions. In this example it has keys for both RS256.
 
 Example Request:
 ```json
